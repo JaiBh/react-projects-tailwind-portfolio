@@ -1,8 +1,10 @@
 import SectionTitle from "../components/SectionTitle";
-import { projects } from "../data";
 import Project from "./Project";
+import useFetchProject from "./useFetchProject";
 
 const Projects = () => {
+  const { isLoading, projects } = useFetchProject();
+  console.log(projects);
   return (
     <section className="py-20 align-element" id="projects">
       <SectionTitle text="web creations"></SectionTitle>
